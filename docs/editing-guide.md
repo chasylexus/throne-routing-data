@@ -27,6 +27,18 @@ Inside these files, use only sing-box headless rule fields that are relevant her
 - `domain_keyword`
 - `ip_cidr`
 
+## Comments Are Allowed
+
+These `manual-*.json` files may contain comments.
+
+Safe comment styles:
+
+- `// single line`
+- `# single line`
+- `/* multi-line */`
+
+That works because sing-box parses source rule-set JSON through its extended JSON reader with a comment filter.
+
 ## Editing Examples
 
 Add one exact domain:
@@ -66,6 +78,7 @@ Add IP and CIDR:
 - Use double quotes.
 - Do not leave trailing commas.
 - Keep the top-level structure as `{"version": 1, "rules": [...]}`.
+- Keep the four fixed sections in the existing order so future edits stay easy to scan.
 
 ## Less Common Edits
 
