@@ -78,7 +78,9 @@ Add IP and CIDR:
 - Use double quotes.
 - Do not leave trailing commas.
 - Keep the top-level structure as `{"version": 1, "rules": [...]}`.
-- Keep the four fixed sections in the existing order so future edits stay easy to scan.
+- Keep exactly one object inside `rules`.
+- Keep the four fixed fields inside that object in the existing order so future edits stay easy to scan.
+- Keep at least one non-empty array in that object, otherwise sing-box will reject the rule-set with `missing conditions`.
 
 ## Less Common Edits
 
