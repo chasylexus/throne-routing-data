@@ -1,0 +1,7 @@
+[
+  {
+    "ip_is_private": true,
+    "action": "route",
+    "outbound": "D"
+  }
+]

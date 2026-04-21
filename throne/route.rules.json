@@ -1,0 +1,50 @@
+[
+  {
+    "rule_set": [
+      "ads-all"
+    ],
+    "action": "route",
+    "outbound": "B"
+  },
+  {
+    "rule_set": [
+      "manual-d"
+    ],
+    "action": "route",
+    "outbound": "D"
+  },
+  {
+    "rule_set": [
+      "manual-a",
+      "netflix"
+    ],
+    "action": "route",
+    "outbound": "A"
+  },
+  {
+    "rule_set": [
+      "manual-t",
+      "openai",
+      "anthropic",
+      "ai-not-cn",
+      "youtube",
+      "spotify",
+      "facebook",
+      "instagram",
+      "whatsapp",
+      "twitter",
+      "telegram",
+      "tiktok",
+      "discord",
+      "linkedin",
+      "microsoft",
+      "google",
+      "wikimedia",
+      "bbc",
+      "cnn",
+      "kinopub"
+    ],
+    "action": "route",
+    "outbound": "T"
+  }
+]
