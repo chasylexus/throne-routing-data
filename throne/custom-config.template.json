@@ -1,0 +1,349 @@
+{
+  "log": {
+    "level": "debug"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "local",
+        "tag": "local"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30"
+      ],
+      "auto_route": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "T",
+      "server": "__T_HOST__",
+      "server_port": 443,
+      "uuid": "__T_UUID__",
+      "flow": "xtls-rprx-vision",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "__T_SNI__",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "__T_FINGERPRINT__"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "__T_PBK__",
+          "short_id": "__T_SID__"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "A",
+      "server": "__A_HOST__",
+      "server_port": 443,
+      "uuid": "__A_UUID__",
+      "flow": "xtls-rprx-vision",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "__A_SNI__",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "__A_FINGERPRINT__"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "__A_PBK__",
+          "short_id": "__A_SID__"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "D"
+    },
+    {
+      "type": "block",
+      "tag": "B"
+    }
+  ],
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "ads-all",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "manual-d",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-d.json",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "manual-a",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-a.json",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "netflix",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "manual-t",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t.json",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "openai",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "anthropic",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "ai-not-cn",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ai-!cn.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "youtube",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "spotify",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-spotify.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "facebook",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-facebook.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "instagram",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-instagram.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "whatsapp",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-whatsapp.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "twitter",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-twitter.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "telegram",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "tiktok",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tiktok.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "discord",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-discord.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "linkedin",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-linkedin.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "microsoft",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "google",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "wikimedia",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-wikimedia.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "bbc",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bbc.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "cnn",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cnn.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "kinopub",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-kinopub.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "D",
+    "rules": [
+      {
+        "inbound": [
+          "tun-in"
+        ],
+        "action": "sniff",
+        "timeout": "500ms"
+      },
+      {
+        "protocol": [
+          "dns"
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "action": "route",
+        "outbound": "D"
+      },
+      {
+        "rule_set": [
+          "ads-all"
+        ],
+        "action": "route",
+        "outbound": "B"
+      },
+      {
+        "rule_set": [
+          "manual-d"
+        ],
+        "action": "route",
+        "outbound": "D"
+      },
+      {
+        "rule_set": [
+          "manual-a",
+          "netflix"
+        ],
+        "action": "route",
+        "outbound": "A"
+      },
+      {
+        "rule_set": [
+          "manual-t",
+          "openai",
+          "anthropic",
+          "ai-not-cn",
+          "youtube",
+          "spotify",
+          "facebook",
+          "instagram",
+          "whatsapp",
+          "twitter",
+          "telegram",
+          "tiktok",
+          "discord",
+          "linkedin",
+          "microsoft",
+          "google",
+          "wikimedia",
+          "bbc",
+          "cnn",
+          "kinopub"
+        ],
+        "action": "route",
+        "outbound": "T"
+      }
+    ]
+  }
+}

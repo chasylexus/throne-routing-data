@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "captive.apple.com",
+        "connectivitycheck.gstatic.com",
+        "connectivity-check.ubuntu.com",
+        "detectportal.firefox.com",
+        "msftconnecttest.com",
+        "www.msftconnecttest.com",
+        "www.msftncsi.com",
+        "dns.msftncsi.com",
+        "nmcheck.gnome.org",
+        "network-test.debian.org"
+      ]
+    }
+  ]
+}
