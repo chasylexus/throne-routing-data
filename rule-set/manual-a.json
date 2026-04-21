@@ -1,6 +1,8 @@
 {
   "version": 1,
   "rules": [
+    // 1. Exact domains only.
+    // Use for a full hostname match like "api.example.com".
     {
       "domain": [
         "apis.google.com",
@@ -19,6 +21,9 @@
         "speechs3proto2-pa.googleapis.com"
       ]
     },
+
+    // 2. Domain suffixes.
+    // Use for a domain and all its subdomains like "example.com".
     {
       "domain_suffix": [
         "gemini.google.com",
@@ -39,6 +44,18 @@
         "peacocktv.com",
         "whatismyip.com"
       ]
+    },
+
+    // 3. Domain keywords.
+    // Use sparingly because this is a substring match.
+    {
+      "domain_keyword": []
+    },
+
+    // 4. IPs and CIDRs.
+    // Single IPs are allowed here too, for example "203.0.113.10".
+    {
+      "ip_cidr": []
     }
   ]
 }
