@@ -19,7 +19,10 @@
 
       // 2. Domain suffixes.
       // Use for a domain and all its subdomains like "example.com".
-      "domain_suffix": [],
+      "domain_suffix": [
+        "wifee.app",
+        "wifee.org"
+      ],
 
       // 3. Domain keywords.
       // Use sparingly because this is a substring match.
