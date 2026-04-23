@@ -5,12 +5,10 @@
       // 1. Exact domains only.
       // Use for a full hostname match like "api.example.com".
       "domain": [
-        "cable.auth.com",
         "captive.apple.com",
         "connectivitycheck.gstatic.com",
         "connectivity-check.ubuntu.com",
         "detectportal.firefox.com",
-        "localhost",
         "msftconnecttest.com",
         "www.msftconnecttest.com",
         "www.msftncsi.com",
@@ -22,47 +20,13 @@
       // 2. Domain suffixes.
       // Use for a domain and all its subdomains like "example.com".
       "domain_suffix": [
-        "aero",
-        "apple-cloudkit.com",
-        "apple.com",
-        "aptilo.com",
-        "beeline.ru",
-        "boingo.com",
-        "direct",
-        "du.ae",
-        "etisalat.ae",
-        "hotspot.beeline.ru",
-        "icloud-content.com",
-        "icloud.com",
-        "icomera.com",
-        "lan",
-        "local",
-        "megafon.ru",
-        "mts.ru",
-        "mzstatic.com",
-        "nomadix.com",
-        "sbrf.ru",
-        "tele2.ru",
-        "turkcell.com.tr",
-        "turktelekom.com.tr",
-        "vodafone.com.tr",
-        "wayport.net",
-        "wifi.mts.ru",
         "wifee.app",
-        "wifee.org",
-        "yota.ru"
+        "wifee.org"
       ],
 
       // 3. Domain keywords.
       // Use sparingly because this is a substring match.
-      "domain_keyword": [
-        "airport",
-        "airports",
-        "guest",
-        "hotspot",
-        "wi-fi",
-        "wifi"
-      ],
+      "domain_keyword": [],
 
       // 4. IPs and CIDRs.
       // Single IPs are allowed here too, for example "203.0.113.10".
