@@ -6,7 +6,8 @@
       // Use for a full hostname match like "api.example.com".
       "domain": [
         "copilot.microsoft.com",
-        "graph.facebook.com"
+        "graph.facebook.com",
+        "youtubei.googleapis.com"
       ],
 
       // 2. Domain suffixes.
