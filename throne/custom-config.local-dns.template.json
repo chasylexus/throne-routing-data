@@ -14,79 +14,9 @@
     "servers": [
       {
         "type": "local",
-        "tag": "local",
-        "prefer_go": true
-      },
-      {
-        "type": "https",
-        "tag": "dns-t",
-        "server": "1.1.1.1",
-        "server_port": 443,
-        "path": "/dns-query",
-        "tls": {
-          "enabled": true,
-          "server_name": "cloudflare-dns.com"
-        },
-        "detour": "T"
-      },
-      {
-        "type": "https",
-        "tag": "dns-a",
-        "server": "1.1.1.1",
-        "server_port": 443,
-        "path": "/dns-query",
-        "tls": {
-          "enabled": true,
-          "server_name": "cloudflare-dns.com"
-        },
-        "detour": "A"
+        "tag": "local"
       }
     ],
-    "rules": [
-      {
-        "rule_set": [
-          "manual-d"
-        ],
-        "action": "route",
-        "server": "local"
-      },
-      {
-        "rule_set": [
-          "manual-a",
-          "netflix"
-        ],
-        "action": "route",
-        "server": "dns-a"
-      },
-      {
-        "rule_set": [
-          "manual-t",
-          "openai",
-          "anthropic",
-          "ai-not-cn",
-          "youtube",
-          "spotify",
-          "facebook",
-          "instagram",
-          "whatsapp",
-          "twitter",
-          "telegram",
-          "tiktok",
-          "discord",
-          "linkedin",
-          "microsoft",
-          "google",
-          "wikimedia",
-          "bbc",
-          "cnn",
-          "kinopub"
-        ],
-        "action": "route",
-        "server": "dns-t"
-      }
-    ],
-    "final": "local",
-    "independent_cache": true,
     "strategy": "ipv4_only"
   },
   "inbounds": [
@@ -349,7 +279,6 @@
       }
     ],
     "auto_detect_interface": true,
-    "default_domain_resolver": "local",
     "final": "D",
     "rules": [
       {
