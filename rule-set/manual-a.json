@@ -50,7 +50,13 @@
 
       // 4. IPs and CIDRs.
       // Single IPs are allowed here too, for example "203.0.113.10".
-      "ip_cidr": []
+      "ip_cidr": [
+        // IPv4 fallbacks.
+        // Add exact IPv4 addresses or narrow IPv4 CIDRs here.
+
+        // IPv6 fallbacks.
+        // Add exact IPv6 addresses or narrow IPv6 CIDRs here.
+      ]
     }
   ]
 }
