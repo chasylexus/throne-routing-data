@@ -29,14 +29,14 @@ Meaning:
 `Throne` configuration lives in `throne/`:
 
 - `throne/custom-config.template.json`
-- `throne/custom-config.local-dns.template.json`
+- `throne/custom-config.ipv4-only.template.json`
 - `throne/route.rule_set.json`
 - `throne/route.rules.json`
 - `throne/route.inline-rules.json`
 
-`throne/custom-config.template.json` is the main profile and uses DNS through the matching proxy outbound for `A` and `T`.
+`throne/custom-config.template.json` is the main dual-stack profile and uses DNS through the matching proxy outbound for `A` and `T`.
 
-`throne/custom-config.local-dns.template.json` is the fallback comparison profile that keeps DNS local.
+`throne/custom-config.ipv4-only.template.json` is the fallback comparison profile. It uses the same proxy-side DNS behavior, but keeps internet traffic IPv4-only.
 
 The current configured rule-set base URL is:
 

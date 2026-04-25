@@ -43,9 +43,6 @@
         "nomadix.com",
         "sbrf.ru",
         "tele2.ru",
-        "turkcell.com.tr",
-        "turktelekom.com.tr",
-        "vodafone.com.tr",
         "wayport.net",
         "wifi.mts.ru",
         "wifee.app",
@@ -66,7 +63,13 @@
 
       // 4. IPs and CIDRs.
       // Single IPs are allowed here too, for example "203.0.113.10".
-      "ip_cidr": []
+      "ip_cidr": [
+        // IPv4 direct IPs and CIDRs.
+        // Add exact IPv4 addresses or narrow IPv4 CIDRs here.
+
+        // IPv6 direct IPs and CIDRs.
+        // Add exact IPv6 addresses or narrow IPv6 CIDRs here.
+      ]
     }
   ]
 }
