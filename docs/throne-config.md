@@ -19,10 +19,11 @@ There are now two local profile templates that point to the same GitHub-hosted r
 - `throne/custom-config.ipv4-only.template.json`
   This is the fallback comparison profile. It uses the same proxy-side DNS routing as the main profile, but keeps internet traffic IPv4-only.
 
-## Clash UI Noise
+## Clash API
 
-Both templates now also include a minimal local Clash API listener at `127.0.0.1:9090`.
-This is not used for routing itself, but it helps `Throne` stop printing repeated `no clash server found` messages when its UI tries to list active connections for a custom profile.
+The recommended templates no longer enable a local Clash API listener.
+This keeps the local profile smaller and avoids exposing connection metadata through `127.0.0.1:9090`.
+The trade-off is that `Throne` may again print repeated `no clash server found` / `Failed to list connections` messages when its UI tries to query Clash-compatible connection state for a custom profile.
 
 ## What To Replace
 
