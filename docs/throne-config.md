@@ -21,9 +21,13 @@ There are now two local profile templates that point to the same GitHub-hosted r
 
 ## Clash API
 
-The recommended templates no longer enable a local Clash API listener.
-This keeps the local profile smaller and avoids exposing connection metadata through `127.0.0.1:9090`.
-The trade-off is that `Throne` may again print repeated `no clash server found` / `Failed to list connections` messages when its UI tries to query Clash-compatible connection state for a custom profile.
+The recommended templates include a local Clash API listener on `127.0.0.1:9090` with a placeholder secret:
+
+- `__CLASH_API_SECRET__`
+
+This secret is local to the desktop client and is not related to your `VLESS` UUID, Reality key, or server-side credentials.
+You can replace it with a fresh random value for each new local config if you want.
+The trade-off is that `Throne` may only stop its `no clash server found` / `Failed to list connections` noise if it also sends the matching Bearer token to this API.
 
 ## What To Replace
 
@@ -35,6 +39,7 @@ You still need to replace outbound placeholders such as:
 
 - `__T_HOST__`, `__T_UUID__`, `__T_FINGERPRINT__`
 - `__A_HOST__`, `__A_UUID__`, `__A_FINGERPRINT__`
+- `__CLASH_API_SECRET__`
 
 ## What Updates On Schedule
 
