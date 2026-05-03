@@ -107,6 +107,7 @@
         "cdn32.lol",
         "kinogo.biz",
         "ottclub.tv",
+        "ottservice.org",
         "speedtest.net",
         "ooklaserver.net",
         "dailymail.co.uk",
@@ -189,6 +190,7 @@
       // while staying within the current safety envelope: IPv4 >= /17, IPv6 >= /32.
       "ip_cidr": [
         // Exact IPv4 IP fallbacks (curated + OpenCCK)
+        "141.94.131.188",
 
         // IPv4 CIDR fallbacks (curated + OpenCCK, no broader than /17)
         "1.9.131.96/30",
