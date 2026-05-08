@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "2ip.ru",
+        "blogspot.ru",
+        "google.ru",
+        "microsoft.ru",
+        "mywishlist.ru",
+        "sci-hub.ru",
+        "youtube.ru"
+      ]
+    }
+  ]
+}
