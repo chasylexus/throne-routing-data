@@ -173,6 +173,14 @@
       },
       {
         "type": "remote",
+        "tag": "manual-t-priority",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t-priority.json",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
         "tag": "manual-d",
         "format": "source",
         "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-d.json",
@@ -200,6 +208,14 @@
         "tag": "manual-t",
         "format": "source",
         "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t.json",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "manual-t-late",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t-late.json",
         "update_interval": "2h",
         "download_detour": "D"
       },
@@ -379,10 +395,10 @@
       },
       {
         "rule_set": [
-          "ads-all"
+          "manual-t-priority"
         ],
         "action": "route",
-        "outbound": "B"
+        "outbound": "T"
       },
       {
         "rule_set": [
@@ -390,6 +406,13 @@
         ],
         "action": "route",
         "outbound": "D"
+      },
+      {
+        "rule_set": [
+          "ads-all"
+        ],
+        "action": "route",
+        "outbound": "B"
       },
       {
         "rule_set": [
@@ -421,6 +444,13 @@
           "bbc",
           "cnn",
           "kinopub"
+        ],
+        "action": "route",
+        "outbound": "T"
+      },
+      {
+        "rule_set": [
+          "manual-t-late"
         ],
         "action": "route",
         "outbound": "T"

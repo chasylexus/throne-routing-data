@@ -15,14 +15,18 @@ There is no build step in the normal workflow.
 Most changes should happen only in these files:
 
 - `rule-set/manual-d.json`
+- `rule-set/manual-t-priority.json`
 - `rule-set/manual-a.json`
 - `rule-set/manual-t.json`
+- `rule-set/manual-t-late.json`
 
 Meaning:
 
 - `manual-d` = direct exceptions
+- `manual-t-priority` = narrow `T` exceptions that must win before broad direct rules
 - `manual-a` = outbound `A`
 - `manual-t` = outbound `T`
+- `manual-t-late` = broad `T` catchalls evaluated just before final direct
 
 ## Files For Throne
 
@@ -45,8 +49,10 @@ The current configured rule-set base URL is:
 Then `Throne` will fetch:
 
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-d.json`
+- `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t-priority.json`
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-a.json`
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t.json`
+- `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t-late.json`
 
 ## What Updates Automatically
 
@@ -55,7 +61,9 @@ If you commit changes to `rule-set/manual-*.json`, `Throne` will fetch the updat
 That means:
 
 - adding domains to `manual-t.json` updates proxy rules automatically
+- adding domains to `manual-t-priority.json` keeps narrow proxy exceptions above broad direct rules
 - adding IP or CIDR to `manual-d.json` updates direct rules automatically
+- adding broad suffixes to `manual-t-late.json` catches otherwise-unmatched domains before final direct
 - moving items between `manual-a.json` and `manual-t.json` updates behavior automatically
 
 ## What Does Not Update Automatically

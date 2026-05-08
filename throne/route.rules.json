@@ -1,10 +1,10 @@
 [
   {
     "rule_set": [
-      "ads-all"
+      "manual-t-priority"
     ],
     "action": "route",
-    "outbound": "B"
+    "outbound": "T"
   },
   {
     "rule_set": [
@@ -12,6 +12,13 @@
     ],
     "action": "route",
     "outbound": "D"
+  },
+  {
+    "rule_set": [
+      "ads-all"
+    ],
+    "action": "route",
+    "outbound": "B"
   },
   {
     "rule_set": [
@@ -43,6 +50,13 @@
       "bbc",
       "cnn",
       "kinopub"
+    ],
+    "action": "route",
+    "outbound": "T"
+  },
+  {
+    "rule_set": [
+      "manual-t-late"
     ],
     "action": "route",
     "outbound": "T"
