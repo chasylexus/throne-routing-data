@@ -66,6 +66,8 @@
       "ip_cidr": [
         // IPv4 direct IPs and CIDRs.
         // Add exact IPv4 addresses or narrow IPv4 CIDRs here.
+        "51.250.48.0/24",
+        "135.106.130.0/24"
 
         // IPv6 direct IPs and CIDRs.
         // Add exact IPv6 addresses or narrow IPv6 CIDRs here.
