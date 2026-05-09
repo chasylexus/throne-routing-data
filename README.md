@@ -25,7 +25,7 @@ Meaning:
 
 - `manual-d` = direct exceptions
 - `manual-t-priority` = narrow `T` exceptions that must win before broad direct rules
-- `manual-a` = manual US streaming / diagnostic additions for outbound `A`
+- `manual-a` = manual A-side streaming / diagnostic additions for outbound `A`
 - `manual-google-ai` = Google AI service additions for outbound `T`
 - `manual-t` = outbound `T`
 - `manual-t-late` = broad `T` catchalls evaluated just before final direct
