@@ -16,7 +16,7 @@ Then commit the change in GitHub's web UI.
 ## Which File To Choose
 
 - `manual-d.json`: domains or IPs that must stay direct
-- `manual-a.json`: manual US streaming or diagnostic domains that must go to outbound `A`
+- `manual-a.json`: manual A-side streaming or diagnostic domains that must go to outbound `A`
 - `manual-google-ai.json`: Google AI domains that must go to outbound `T`
 - `manual-t.json`: domains or IPs that must go to outbound `T`
 
