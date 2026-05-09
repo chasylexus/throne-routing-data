@@ -17,6 +17,7 @@ Most changes should happen only in these files:
 - `rule-set/manual-d.json`
 - `rule-set/manual-t-priority.json`
 - `rule-set/manual-a.json`
+- `rule-set/manual-google-ai.json`
 - `rule-set/manual-t.json`
 - `rule-set/manual-t-late.json`
 
@@ -24,7 +25,8 @@ Meaning:
 
 - `manual-d` = direct exceptions
 - `manual-t-priority` = narrow `T` exceptions that must win before broad direct rules
-- `manual-a` = outbound `A`
+- `manual-a` = manual US streaming / diagnostic additions for outbound `A`
+- `manual-google-ai` = Google AI service additions for outbound `T`
 - `manual-t` = outbound `T`
 - `manual-t-late` = broad `T` catchalls evaluated just before final direct
 
@@ -51,6 +53,7 @@ Then `Throne` will fetch:
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-d.json`
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t-priority.json`
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-a.json`
+- `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-google-ai.json`
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t.json`
 - `https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t-late.json`
 
@@ -63,6 +66,7 @@ That means:
 - adding domains to `manual-t.json` updates proxy rules automatically
 - adding domains to `manual-t-priority.json` keeps narrow proxy exceptions above broad direct rules
 - adding IP or CIDR to `manual-d.json` updates direct rules automatically
+- adding Google AI domains to `manual-google-ai.json` updates the separate Google AI rule-set automatically
 - adding broad suffixes to `manual-t-late.json` catches otherwise-unmatched domains before final direct
 - moving items between `manual-a.json` and `manual-t.json` updates behavior automatically
 

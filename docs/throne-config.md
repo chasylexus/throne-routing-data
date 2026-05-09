@@ -15,7 +15,7 @@ Use these files as the source for the local `Throne` `Custom Config` setup:
 There are now two local profile templates that point to the same GitHub-hosted rule-set assets:
 
 - `throne/custom-config.template.json`
-  This is the main dual-stack profile. It sends DNS for `manual-a`/`netflix` through outbound `A` and DNS for `manual-t` plus the upstream `T` tags through outbound `T`, while allowing both IPv4 and IPv6 internet traffic through the same routing logic.
+  This is the main dual-stack profile. It sends DNS for the `A` streaming rule-sets through outbound `A` and DNS for `manual-google-ai`, `manual-t`, plus the upstream `T` tags through outbound `T`, while allowing both IPv4 and IPv6 internet traffic through the same routing logic.
 - `throne/custom-config.ipv4-only.template.json`
   This is the fallback comparison profile. It uses the same proxy-side DNS routing as the main profile, but keeps internet traffic IPv4-only.
 
@@ -47,12 +47,14 @@ These remote rule-sets are designed to update every `2h`:
 
 - `manual-d`
 - `manual-a`
+- `manual-google-ai`
 - `manual-t`
 
 So after a GitHub web edit and commit to one of:
 
 - `rule-set/manual-d.json`
 - `rule-set/manual-a.json`
+- `rule-set/manual-google-ai.json`
 - `rule-set/manual-t.json`
 
 `Throne` will fetch the updated file on its next rule-set refresh cycle.

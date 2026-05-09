@@ -4,44 +4,13 @@
     {
       // 1. Exact domains only.
       // Use for a full hostname match like "api.example.com".
-      "domain": [
-        "apis.google.com",
-        "clients6.google.com",
-        "play.google.com",
-        "colab.research.google.com",
-        "geller-pa.googleapis.com",
-        "aida.googleapis.com",
-        "aisandbox-pa.googleapis.com",
-        "proactivebackend-pa.googleapis.com",
-        "robinfrontend-pa.googleapis.com",
-        "antigravity-pa.googleapis.com",
-        "antigravity.googleapis.com",
-        "stitch.withgoogle.com",
-        "firebaseinstallations.googleapis.com",
-        "speechs3proto2-pa.googleapis.com"
-      ],
+      "domain": [],
 
       // 2. Domain suffixes.
       // Use for a domain and all its subdomains like "example.com".
       "domain_suffix": [
-        "gemini.google.com",
-        "bard.google.com",
-        "aistudio.google.com",
-        "generativelanguage.googleapis.com",
-        "makersuite.google.com",
-        "notebooklm.google.com",
-        "notebooklm.google",
-        "deepmind.com",
-        "deepmind.google",
-        "ai.google.dev",
-        "generativeai.google",
-        "labs.google",
-        "jules.google",
-        "antigravity.google",
-        "primevideo.com",
         "peacocktv.com",
-        "whatismyip.com",
-        "astrill.com"
+        "whatismyip.com"
       ],
 
       // 3. Domain keywords.

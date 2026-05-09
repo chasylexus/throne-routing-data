@@ -65,6 +65,7 @@ Then `Throne` can fetch:
 
 - `.../manual-d.json`
 - `.../manual-a.json`
+- `.../manual-google-ai.json`
 - `.../manual-t.json`
 
 ## What You Normally Edit On GitHub
@@ -73,6 +74,7 @@ Usually only these files:
 
 - `rule-set/manual-d.json`
 - `rule-set/manual-a.json`
+- `rule-set/manual-google-ai.json`
 - `rule-set/manual-t.json`
 
 Less often:
