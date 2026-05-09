@@ -54,7 +54,12 @@
       {
         "rule_set": [
           "manual-a",
-          "netflix"
+          "netflix",
+          "hulu",
+          "disney",
+          "hbo",
+          "espn",
+          "primevideo"
         ],
         "action": "route",
         "server": "dns-a"
@@ -62,6 +67,7 @@
       {
         "rule_set": [
           "manual-t",
+          "manual-google-ai",
           "openai",
           "anthropic",
           "ai-not-cn",
@@ -197,9 +203,57 @@
       },
       {
         "type": "remote",
+        "tag": "manual-google-ai",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-google-ai.json",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
         "tag": "netflix",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "hulu",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-hulu.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "disney",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-disney.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "hbo",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-hbo.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "espn",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-espn.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "primevideo",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-primevideo.srs",
         "update_interval": "2h",
         "download_detour": "D"
       },
@@ -418,7 +472,12 @@
       {
         "rule_set": [
           "manual-a",
-          "netflix"
+          "netflix",
+          "hulu",
+          "disney",
+          "hbo",
+          "espn",
+          "primevideo"
         ],
         "action": "route",
         "outbound": "A"
@@ -426,6 +485,7 @@
       {
         "rule_set": [
           "manual-t",
+          "manual-google-ai",
           "openai",
           "anthropic",
           "ai-not-cn",

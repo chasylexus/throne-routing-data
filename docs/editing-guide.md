@@ -6,6 +6,7 @@ For day-to-day routing changes, edit only one of these files:
 
 - `rule-set/manual-d.json`
 - `rule-set/manual-a.json`
+- `rule-set/manual-google-ai.json`
 - `rule-set/manual-t.json`
 
 Then commit the change in GitHub's web UI.
@@ -15,7 +16,8 @@ Then commit the change in GitHub's web UI.
 ## Which File To Choose
 
 - `manual-d.json`: domains or IPs that must stay direct
-- `manual-a.json`: domains or IPs that must go to outbound `A`
+- `manual-a.json`: manual US streaming or diagnostic domains that must go to outbound `A`
+- `manual-google-ai.json`: Google AI domains that must go to outbound `T`
 - `manual-t.json`: domains or IPs that must go to outbound `T`
 
 ## Valid Rule Fields

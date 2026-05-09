@@ -23,7 +23,12 @@
   {
     "rule_set": [
       "manual-a",
-      "netflix"
+      "netflix",
+      "hulu",
+      "disney",
+      "hbo",
+      "espn",
+      "primevideo"
     ],
     "action": "route",
     "outbound": "A"
@@ -31,6 +36,7 @@
   {
     "rule_set": [
       "manual-t",
+      "manual-google-ai",
       "openai",
       "anthropic",
       "ai-not-cn",
