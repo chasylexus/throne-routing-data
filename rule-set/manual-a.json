@@ -9,6 +9,7 @@
       // 2. Domain suffixes.
       // Use for a domain and all its subdomains like "example.com".
       "domain_suffix": [
+        "2ip.ru",
         "peacocktv.com",
         "whatismyip.com"
       ],
