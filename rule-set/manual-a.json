@@ -23,6 +23,7 @@
       "ip_cidr": [
         // IPv4 fallbacks.
         // Add exact IPv4 addresses or narrow IPv4 CIDRs here.
+        "188.40.167.82/32"
 
         // IPv6 fallbacks.
         // Add exact IPv6 addresses or narrow IPv6 CIDRs here.
