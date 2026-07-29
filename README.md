@@ -74,6 +74,8 @@ That means:
 
 The list of referenced upstream tags inside the local `Throne` `Custom Config` is still static.
 
+Last.fm is included through the ready-made SagerNet `geosite-lastfm.srs` rule-set and is routed through outbound `T`.
+
 So if you later want to:
 
 - add a brand new upstream rule-set tag
