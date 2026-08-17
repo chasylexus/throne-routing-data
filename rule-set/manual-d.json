@@ -43,8 +43,6 @@
         "nomadix.com",
         "sbrf.ru",
         "tele2.ru",
-        "voidboost.cc",
-        "voidboost.one",
         "wayport.net",
         "wifi.mts.ru",
         "wifee.app",
@@ -64,13 +62,7 @@
         "wifi"
       ],
 
-      // 4. Domain regular expressions.
-      // Keep current and future single-label voidboost TLDs on the direct path.
-      "domain_regex": [
-        "(^|\\.)voidboost\\.[a-z0-9-]+$"
-      ],
-
-      // 5. IPs and CIDRs.
+      // 4. IPs and CIDRs.
       // Single IPs are allowed here too, for example "203.0.113.10".
       "ip_cidr": [
         // IPv4 direct IPs and CIDRs.
