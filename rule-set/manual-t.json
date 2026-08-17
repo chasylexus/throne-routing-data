@@ -165,6 +165,8 @@
         "sci-hub.se",
         "hdrezka.ac",
         "rezka.ag",
+        "voidboost.cc",
+        "voidboost.one",
         "filmix.ac",
         "lostfilm.download",
         "lostfilm.tv",
@@ -269,7 +271,14 @@
         "ookla"
       ],
 
-      // 4. IPs and CIDRs.
+      // 4. Domain regular expressions.
+      // Match the voidboost label under any single-label TLD without broad
+      // substring matching such as "notvoidboost.example".
+      "domain_regex": [
+        "(^|\\.)voidboost\\.[a-z0-9-]+$"
+      ],
+
+      // 5. IPs and CIDRs.
       // Single IPs are allowed here too, for example "203.0.113.10".
       // OpenCCK-derived IP fallback tail is safely collapsed with up to 4x expansion,
       // while staying within the current safety envelope: IPv4 >= /17, IPv6 >= /32.
