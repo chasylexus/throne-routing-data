@@ -15,6 +15,8 @@
       // 2. Domain suffixes.
       // Use for a domain and all its subdomains like "example.com".
       "domain_suffix": [
+        "spook.boo",
+        "etrecheck.com",
         "openai.com",
         "chatgpt.com",
         "chat.com",
