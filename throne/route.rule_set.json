@@ -89,6 +89,14 @@
   },
   {
     "type": "remote",
+    "tag": "cbs",
+    "format": "binary",
+    "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cbs.srs",
+    "update_interval": "2h",
+    "download_detour": "D"
+  },
+  {
+    "type": "remote",
     "tag": "manual-t",
     "format": "source",
     "url": "https://raw.githubusercontent.com/chasylexus/throne-routing-data/main/rule-set/manual-t.json",

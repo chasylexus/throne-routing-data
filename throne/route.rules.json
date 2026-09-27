@@ -28,7 +28,8 @@
       "disney",
       "hbo",
       "espn",
-      "primevideo"
+      "primevideo",
+      "cbs"
     ],
     "action": "route",
     "outbound": "A"

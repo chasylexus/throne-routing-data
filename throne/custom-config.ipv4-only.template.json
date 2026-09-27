@@ -59,7 +59,8 @@
           "disney",
           "hbo",
           "espn",
-          "primevideo"
+          "primevideo",
+          "cbs"
         ],
         "action": "route",
         "server": "dns-a"
@@ -255,6 +256,14 @@
         "tag": "primevideo",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-primevideo.srs",
+        "update_interval": "2h",
+        "download_detour": "D"
+      },
+      {
+        "type": "remote",
+        "tag": "cbs",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cbs.srs",
         "update_interval": "2h",
         "download_detour": "D"
       },
@@ -485,7 +494,8 @@
           "disney",
           "hbo",
           "espn",
-          "primevideo"
+          "primevideo",
+          "cbs"
         ],
         "action": "route",
         "outbound": "A"

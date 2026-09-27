@@ -4,13 +4,23 @@
     {
       // 1. Exact domains only.
       // Use for a full hostname match like "api.example.com".
-      "domain": [],
+      "domain": [
+        "cbsi.live.ott.irdeto.com",
+        "cbsplaylistserver.aws.syncbak.com",
+        "cbsservice.aws.syncbak.com",
+        "link.theplatform.com"
+      ],
 
       // 2. Domain suffixes.
       // Use for a domain and all its subdomains like "example.com".
       "domain_suffix": [
         "2ip.ru",
         "peacocktv.com",
+        "cbsaavideo.com",
+        "cbsi.com",
+        "cbsivideo.com",
+        "paramountplus.com",
+        "pplusstatic.com",
         "whatismyip.com"
       ],
 
