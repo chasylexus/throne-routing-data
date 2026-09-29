@@ -89,3 +89,12 @@ you must also update the local `Throne` config.
 - Do not store credentials, tokens, passwords, private hostnames, or personal data here.
 - Do not store files that reveal a user name, family name, or organization.
 - Use a neutral GitHub owner if the repo will be public.
+
+## Amazon and streaming coverage (2026-09-30)
+
+manual-a.json includes a SagerNet Amazon-minus-AWS snapshot, retaining logical
+exclusions for aws.amazon.com and aws.a2z.com, plus narrow Amazon / Prime Video /
+Hulu additions from blackmatrix7. The existing Prime Video, Hulu and CBS /
+Paramount+ upstreams remain connected. This source is shared with the router;
+clients refresh it on their existing schedule. Generic AWS/CloudFront and
+unrelated routing are preserved. HTTPS checks do not verify film playback.

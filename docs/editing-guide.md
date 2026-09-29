@@ -80,8 +80,8 @@ Add IP and CIDR:
 - Use double quotes.
 - Do not leave trailing commas.
 - Keep the top-level structure as `{"version": 1, "rules": [...]}`.
-- Keep exactly one object inside `rules`.
-- Keep the four fixed fields inside that object in the existing order so future edits stay easy to scan.
+- Keep the first manual object in place. The additional Amazon logical rule excludes AWS subtrees; the streaming supplement is a separate OR rule.
+- Keep the four fixed fields inside the first object in their existing order. Preserve the Amazon logical rule and its nested exclusions when editing other domains.
 - Keep at least one non-empty array in that object, otherwise sing-box will reject the rule-set with `missing conditions`.
 
 ## Less Common Edits
